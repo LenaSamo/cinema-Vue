@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cl1: #454545;
+    --cl2: #71CBDF;
+    --cl3: #FB7839;
+    --cl4: #f3f3f3;
+    --cl5: #296C74;
+    --cl6: #2e2e2e;
+}
+@font-face {
+	font-family: 'russo'; 
+	src: url(./fonts/russo/RussoOne-Regular.ttf); 
+}
+@font-face {
+	font-family: 'Ubuntu Mono'; 
+	src: url(./fonts/Ubuntu_Mono/UbuntuMono-Regular.ttf); 
+}
+body
+{
+    background-color: var(--cl1);
+}
+/*Шапка сайта*/
+.header{
+    padding: 0.6rem;
+    display: grid;
+    font-family: 'russo', sans-serif;
+    background-color: var(--cl6);
+    color: var(--cl4);
+    /* border-bottom: 0.1rem solid rgb(220, 39, 39); */
+    grid-template-columns: 20% 80%;
+}
+.header h1{
+    padding: 0.5rem;
+}
+.header h1 a{
+    text-decoration: none;
+    color: var(--cl4);
+}
+.menuA{
+    display: flex;
+    justify-content:  flex-end;
+    font-size: 1.3rem;
+}
+.menuA li{
+    list-style-type: none;
+    padding: 1rem;
+}
+.menuA li a{
+    font-family: 'Ubuntu Mono', monospace;
+    text-decoration: none;
+    color: var(--cl4);
+}
+
+/*Блок Ближайщих сеансов*/
+.blockUpcomingSessions{
+    margin: 1rem;
+    text-align: center;
+    color: var(--cl3);
+}
+.blockUpcomingSessions h2{
+    font-family: 'russo', sans-serif;
+}
+#users{
+    margin: 1rem;
+}
+
+/* границы ячеек первого ряда таблицы */
+th {
+    border: 1px solid grey;
+    padding: 1rem;
+}
+/* границы ячеек тела таблицы */
+td {
+    border: 1px solid grey;
+    padding: 1rem;
+}
+p {
+    color: black;
+    font-size: 20px
+}
+#footer {
+    min-height: calc(15vh - 2px);
+    /* position: absolute; Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 30px; /* Поля вокруг текста */
+    background: var(--cl6); /* Цвет фона */
+    color: var(--cl3); /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}
+.wrapper {
+    width: 700px;
+    height: 350px;
+   /* border: 5px solid #515151;*/
+}
+.exmpl {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.exmpl img {
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+}

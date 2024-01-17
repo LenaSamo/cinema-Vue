@@ -1,0 +1,142 @@
+input:focus{
+    outline: none;
+}
+#blockBuyTickets{
+    margin: 2rem;
+    
+}
+/*вывод информации о фильме*/
+.infoFilm{
+    display: grid;
+    margin: 2rem;
+    grid-template-columns: 10% 1fr;
+    grid-template-rows: 50% 30% 15%;
+}
+.infoFilm .circles{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    display: flex;
+    color: var(--cl4);
+    
+}
+.infoFilm .circle{
+    margin: 0 1rem 0 3rem;
+    border-radius: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-color: var(--cl5);
+}
+.infoFilm #circle1{
+    background-color: var(--cl6);
+}
+.infoFilm #circle2{
+    background-color: var(--cl3);
+}
+.infoFilm h1{
+    font-family: 'russo', sans-serif;
+    padding-bottom: 1rem;
+    grid-column: 2/3;
+    font-size: 3.5rem;
+    color: var(--cl3);
+}
+.infoFilm p{
+    font-size: 1.5rem;
+    color: var(--cl4);
+    grid-column: 2/3;
+}
+.infoFilm input{
+    text-align: left;
+    color: var(--cl4);
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+}
+.infoFilm .ext{
+    border-radius: 2rem;
+    height: 4rem;
+    width: 4rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    color: var(--cl4);
+    font-size: 1.5rem;
+    background-color: var(--cl2);
+    border: none;
+}
+.infoFilm .ext:hover{
+    background-color: var(--cl3);
+}
+
+/*вывод зала*/
+.blockHall{
+    font-family: 'russo', sans-serif;
+    background-color: var(--cl4);
+    text-align: center;
+    border-radius: 10px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+.blockHall #Win{
+    background-color: var(--cl5);
+    color: var(--cl2);
+    text-align: center;
+    border-radius: 10px;
+    width: 50rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    grid-column: 1/4;
+}
+.blockHall .circleRowLeft{
+    grid-column: 1/2;
+    
+}
+.blockHall .circleRowRight{
+    grid-column: 3/4;
+    
+}
+.blockHall .mainBlock{
+    grid-column: 2/3;
+    
+}
+.blockHall .circleRowLeft .circle, .circleRowRight .circle,
+.mainBlock .circle{
+    border-radius: 2rem;
+    height: 4rem;
+    width: 4rem;
+    border: none;
+    background-color: var(--cl5);
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+.mainBlock .circle{
+    color: var(--cl5);
+}
+.mainBlock .circleSelected{
+    color: var(--cl4);
+    background-color: var(--cl3);
+}
+.mainBlock .circle:hover, .mainBlock .circle:active{
+    color: var(--cl4);
+}
+.blockSelectePlaces{
+    background-color: var(--cl6);
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom:  0;
+    position: fixed;
+    padding: 1.5rem;
+
+}
+
+/*блок бронирования билета*/
+.blockBuy .places{
+    border-bottom: 3px solid var(--cl2);
+    padding: 1rem;
+}
+.blockBuy .place{
+    display: grid;
+    grid-template-columns: 2fr 1fr 10%;
+}

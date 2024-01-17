@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Кинотеатр</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet'  href='./css/main.css'>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="import" href="/header.html">
+</head>
+<body>
+    <div id="reg">
+        <h1>Регистрация</h1>
+        <label for="tEmail">Email</label>
+        <input id="tEmail" type="text" v-model="email"><br>
+        <div class="error" >{{ errorEmail }}</div>
+
+        <label for="tPassword">Password</label>
+        <input id="tPassword" type="text" v-model="password"><br>
+        <div class="error" >{{ errorPassword }}</div>
+
+        <input id="registration" type="submit" value="Регистрация" v-on:click="registration(email, password)">
+    </div>
+    <div id="users">
+        <table>
+            <tbody>
+              <tr>
+                <th>Ид</th>
+                <th>Почта</th>
+                <th>Дата регистрации</th>
+                <th>Роль</th>
+              </tr>
+              <tr v-for="user in users">
+                <td><input class="tId" type="text" v-bind:value='user.id'></td>
+                <td><input class="tId" type="text" v-bind:value='user.email'></td>
+                <td>{{ user.date_reg }}</td>
+                <td>
+                    <select>
+                        <option selected>{{ user.role }}</option>
+                        <option v-for="role in roles">{{ role.role }}</option>
+                    </select>
+                </td>
+                <td>
+                    <input class="registration" type="submit" value="Обновить" >
+                    <input class="registration" type="submit" value="Удалить" >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    <script src='./js/main.js'></script>
+</body>
+</html>
